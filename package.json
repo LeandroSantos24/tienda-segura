@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LeandroSantos24/tienda-segura#readme",
   "dependencies": {
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "lodash": "^4.17.15"
   }
 }
