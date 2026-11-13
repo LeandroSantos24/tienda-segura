@@ -12,4 +12,9 @@ app.get("/calcular", (req, res) => {
   const resultado = Number(req.query.a) + Number(req.query.b);
   res.json({ resultado });
 });
+// Solo escucha si se ejecuta "node app.js". Si lo importa el test
+// (require("./app")), no abre el puerto y "node --test" termina.
+if (require.main === module) {
+  app.listen(3000, () => console.log("tienda-segura en http://localhost:3000"));
+}
 module.exports = { app, total };
